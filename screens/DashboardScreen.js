@@ -1,6 +1,6 @@
 import { StyleSheet, Text, View } from 'react-native';
 
-function DashboardScreen() {
+function DashboardScreen({ navigation }) {
     return (
         <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
             <Text>Dashboard Screen</Text>
