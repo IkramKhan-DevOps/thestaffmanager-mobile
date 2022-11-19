@@ -1,4 +1,4 @@
-import React from "react";
+import * as React from 'react';
 import Ionicons from "@expo/vector-icons/Ionicons";
 import DashboardScreen from "../screens/DashboardScreen";
 import ShiftsScreen from "../screens/ShiftsScreen";
@@ -38,7 +38,6 @@ const BottomNavigation = ({navigation}) => {
                 headerShown: false,
                 tabBarActiveTintColor: 'tomato',
                 tabBarInactiveTintColor: 'gray',
-
             })}
         >
             <Tab.Screen name="Dashboard" component={DashboardScreen}/>

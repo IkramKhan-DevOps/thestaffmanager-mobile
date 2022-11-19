@@ -28,7 +28,7 @@ function LoginScreen({navigation}) {
 
                 <Line />
 
-                <TouchableOpacity style={styles.buttonContainer} >
+                <TouchableOpacity style={styles.buttonContainer} onPress={()=> navigation.navigate("BottomNavigation") } >
                     <Text style={styles.buttonText}>
                         Submit
                     </Text>

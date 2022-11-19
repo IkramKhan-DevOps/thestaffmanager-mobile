@@ -21,7 +21,7 @@ function PasswordChangeScreen({navigation}) {
 
                 <Line/>
 
-                <TouchableOpacity style={styles.buttonContainer}>
+                <TouchableOpacity style={styles.buttonContainer} onPress={()=>navigation.navigate("PasswordReset")}>
                     <Text style={styles.buttonText}>
                         Submit
                     </Text>
