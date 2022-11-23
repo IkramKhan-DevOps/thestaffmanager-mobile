@@ -37,4 +37,8 @@ export default {
     darkGreen: "#8ac926",
     darkBlue: "#1982c4",
     darkPurple: "#6a4c93",
+
+    red: "#e5383b",
+    lightRed: "#ff686b",
+    DarkRed: "#dd1c1a",
 }

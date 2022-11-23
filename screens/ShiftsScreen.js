@@ -55,7 +55,8 @@ function ShiftsScreen() {
 
                 </View>
 
-                <View style={{flexDirection: "row", marginTop:10, borderTopWidth:1,paddingTop:10, borderTopColor:colors.grey200}}>
+                <View style={{flexDirection: "row", marginTop:10, borderTopWidth:1,paddingTop:10,
+                    borderTopColor:colors.lightGrey}}>
 
                     <View style={{flex:1, flexDirection:"row"}}>
                         <Ionicons name={"timer"} size={15} />
@@ -114,8 +115,9 @@ const styles = StyleSheet.create({
 
     itemContainer: {
         padding: 10,
-        backgroundColor: colors.white,
-        marginVertical: 2
+        backgroundColor: colors.white100,
+        marginVertical: 2,
+        borderRadius:20,
     },
     itemRow: {
         flexDirection: "row",
