@@ -1,6 +1,6 @@
 export default {
     dark: "#212529",
-    lightDark: "#343a40",
+    lightDark: "#283618",
 
     light: "#dee2e6",
     lightGrey: "#adb5bd",

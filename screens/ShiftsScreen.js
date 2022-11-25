@@ -12,8 +12,8 @@ function ShiftsScreen() {
             endDate: '2022-22-22',
             startTime: '00:00',
             endTime: '12:12',
-            client: 'Pepsi Ltd',
-            site: 'London Cant',
+            client: 'Pepsi Corporation',
+            site: 'London Street 927',
         },
         {
             id: '3ac68afc-c605-48d3-a4f8-fbd91aa97f63',
@@ -22,7 +22,7 @@ function ShiftsScreen() {
             endDate: '2022-22-22',
             startTime: '00:00',
             endTime: '12:12',
-            client: 'Mountain Dew Ltd',
+            client: 'Advance Equipments',
             site: 'Islamabad F8',
         },
         {
@@ -32,7 +32,7 @@ function ShiftsScreen() {
             endDate: '2022-22-22',
             startTime: '00:00',
             endTime: '12:12',
-            client: 'Sprite Green pvt',
+            client: 'Alienware Products',
             site: 'New Work Times',
         },
     ];
@@ -44,30 +44,30 @@ function ShiftsScreen() {
 
                     <View style={{flex: 1}}>
 
-                        <Text style={{fontWeight: "bold", fontSize: 24}}>{client}</Text>
-                        <Text style={{fontWeight: "bold", fontSize: 18, color: colors.lightGrey}}>({site})</Text>
+                        <Text style={{fontWeight: "bold", fontSize: 24, color:colors.lightDark}}>{client}</Text>
+                        <Text style={{fontSize: 16, color: colors.lightGrey}}>{site}</Text>
 
                     </View>
 
                     <View style={{justifyContent: "center"}}>
-                        <Text><Ionicons name={"checkmark-circle"} size={18} color={"green"}/></Text>
+                        <Text><Ionicons name={"checkmark-circle"} size={40} color={"green"}/></Text>
                     </View>
 
                 </View>
 
-                <View style={{flexDirection: "row", marginTop:10, borderTopWidth:1,paddingTop:10,
+                <View style={{flexDirection: "row", marginTop:10, borderTopWidth:0,paddingTop:10, padding:10,
                     borderTopColor:colors.lightGrey}}>
 
                     <View style={{flex:1, flexDirection:"row"}}>
-                        <Ionicons name={"timer"} size={15} />
-                        <Text style={{marginLeft:5}}>
+                        <Ionicons name={"timer"} size={15} color={colors.darkGrey} />
+                        <Text style={{padding:0, color:colors.darkGrey}}>
                             <Text style={{fontWeight: "bold"}}>{startDate}</Text> ({startTime})
                         </Text>
                     </View>
 
                     <View style={{flexDirection:"row"}}>
-                        <Ionicons name={"timer"} size={15} />
-                        <Text style={{marginLeft:5}}>
+                        <Ionicons name={"timer"} size={15} color={colors.darkGrey} />
+                        <Text style={{padding:0, color:colors.darkGrey}}>
                             <Text style={{fontWeight: "bold"}}>{endDate} </Text> ({endTime})
                         </Text>
                     </View>
@@ -115,12 +115,13 @@ const styles = StyleSheet.create({
 
     itemContainer: {
         padding: 10,
-        backgroundColor: colors.white100,
+        backgroundColor: colors.white,
         marginVertical: 2,
-        borderRadius:20,
+        borderRadius:10,
     },
     itemRow: {
         flexDirection: "row",
+        padding:10,
     },
 
     heading: {
