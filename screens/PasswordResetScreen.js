@@ -1,6 +1,7 @@
 import {Image, StyleSheet, Text, TextInput, TouchableOpacity, View} from 'react-native';
 import Line from "../components/Line";
 import colors from "../config/colors";
+import MInput from "../components/MInput";
 
 function PasswordResetScreen({navigation}) {
     return (
@@ -17,7 +18,7 @@ function PasswordResetScreen({navigation}) {
 
                 {/* INPUT CONTAINER */}
                 <View style={styles.inputContainer}>
-                    <TextInput style={styles.input} keyboardType={"email-address"} placeholder={"Enter your registered email"}/>
+                    <MInput placeholder={"Enter Email"} iconName={"lock-open"} keyboardType={"default"}  />
                 </View>
 
                 <Line/>
@@ -36,6 +37,7 @@ function PasswordResetScreen({navigation}) {
         </View>
     );
 }
+
 
 const styles = StyleSheet.create({
     container: {

@@ -1,4 +1,4 @@
-import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
+import {Image, StyleSheet, Text, TextInput, TouchableOpacity, View} from 'react-native';
 import BaseView from "../components/BaseView";
 import colors from "../config/colors";
 import {Ionicons} from "@expo/vector-icons";

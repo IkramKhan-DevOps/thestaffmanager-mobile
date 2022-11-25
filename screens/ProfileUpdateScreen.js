@@ -1,8 +1,20 @@
-import {Image, StyleSheet, Text, TextInput, TouchableOpacity, View} from 'react-native';
+import {Image, StyleSheet, Switch, Text, TextInput, TouchableOpacity, View} from 'react-native';
 import Line from "../components/Line";
 import colors from "../config/colors";
+import MInput from "../components/MInput";
+import {useState} from "react";
+import MPicker from "../components/MPicker";
 
 function ProfileUpdateScreen({navigation}) {
+    const [checkVal, setCheckVal] = useState(true)
+    const [option, setOption] = useState()
+    const options = [
+        {label: 'MARK I', value: 1},
+        {label: 'MARK X', value: 2},
+        {label: 'MARK Z', value: 3},
+        {label: 'MARK K', value: 4},
+    ]
+
     return (
         // MAIN CONTAINER
         <View style={styles.container}>
@@ -14,13 +26,25 @@ function ProfileUpdateScreen({navigation}) {
 
                 {/* INPUT CONTAINER */}
                 <View style={styles.inputContainer}>
-                    <TextInput style={styles.input} keyboardType={"default"} placeholder={"Username"}/>
-                    <TextInput style={styles.input} keyboardType={"default"} placeholder={"First Name"}/>
-                    <TextInput style={styles.input} keyboardType={"default"} placeholder={"Last Name"}/>
-                    <TextInput style={styles.input} keyboardType={"email-address"} placeholder={"Email Address"}/>
-                    <TextInput style={styles.input} keyboardType={"phone-pad"} placeholder={"Phone Number"}/>
-                    <TextInput style={styles.input} keyboardType={"default"} secureTextEntry={true}
-                               placeholder={"Enter Password"}/>
+                    <MInput iconName={"checkmark-done-sharp"} keyboardType={"default"} placeholder={"Username"}/>
+                    <MInput iconName={"text"} keyboardType={"default"} placeholder={"First Name"}/>
+                    <MInput iconName={"text"} keyboardType={"default"} placeholder={"Last Name"}/>
+                    <MInput iconName={"mail"} keyboardType={"email-address"} placeholder={"Email Address"}/>
+                    <MInput iconName={"call"} keyboardType={"phone-pad"} placeholder={"Phone Number"}/>
+                    <MPicker iconName={"apps"} items={options} placeholder={"Category"}
+                             onSelectItem={(option)=>setOption(option)} selectedItem={option}
+                    />
+
+                    <View style={{flexDirection:"row", alignItems:"center"}}>
+                        <Switch value={checkVal} thumbColor={colors.blue} onValueChange={
+                            (value) => setCheckVal(value)
+                        }/>
+                        <Text style={{fontWeight:"bold", color:colors.darkGrey}}>
+                            Are yu sure you want check this option.
+                        </Text>
+                    </View>
+
+
                 </View>
 
                 <Line/>
@@ -31,7 +55,7 @@ function ProfileUpdateScreen({navigation}) {
                     </Text>
                 </TouchableOpacity>
 
-                <Text style={{padding:10, color:colors.dark, fontWeight:"bold"}}>
+                <Text style={{padding: 10, color: colors.dark, fontWeight: "bold"}}>
                     Want to change Password? Click Here.
                 </Text>
             </View>
@@ -46,8 +70,8 @@ const styles = StyleSheet.create({
         alignItems: "center",
         justifyContent: "center"
     },
-    subContainer:{
-        width:"100%",
+    subContainer: {
+        width: "100%",
         paddingHorizontal: 30
     },
     inputContainer: {
